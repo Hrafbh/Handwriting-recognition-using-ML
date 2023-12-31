@@ -7,16 +7,7 @@ from activations import sigmoid, sigmoid_backward, relu, relu_backward
 np.random.seed(1)
 
 def compute_cost(AL, Y):
-    """
-    Implement the cost function defined by equation (7).
 
-    Arguments:
-    AL -- probability vector corresponding to your label predictions, shape (1, number of examples)
-    Y -- true "label" vector (for example: containing 0 if non-cat, 1 if cat), shape (1, number of examples)
-
-    Returns:
-    cost -- cross-entropy cost
-    """
     
     m = Y.shape[1]
 
