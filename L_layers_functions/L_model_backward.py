@@ -1,7 +1,7 @@
 import numpy as np
 import h5py
 import matplotlib.pyplot as plt
-from dnn_utils import sigmoid, sigmoid_backward, relu, relu_backward
+from activations   import sigmoid, sigmoid_backward, relu, relu_backward
 
 
 np.random.seed(1)

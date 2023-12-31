@@ -1,7 +1,7 @@
 import numpy as np
 import h5py
 import matplotlib.pyplot as plt
-from dnn_utils import sigmoid, sigmoid_backward, relu, relu_backward
+from activations   import sigmoid, sigmoid_backward, relu, relu_backward
 
 
 np.random.seed(1)
@@ -48,12 +48,12 @@ def linear_activation_forward(A_prev, W, b, activation):
     if activation == "sigmoid":
 
         Z, linear_cache = linear_forward(A_prev, W, b)
-        A, activation_cache = sigmoid(Z)
+        A, activation_cache = sigmoid(A_prev, W ,b)
 
     elif activation == "relu":
 
         Z, linear_cache = linear_forward(A_prev, W, b)
-        A, activation_cache = relu(Z)
+        A, activation_cache = relu(A_prev, W ,b)
 
     cache = (linear_cache, activation_cache)
 
